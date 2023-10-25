@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "uniswap_v3_math", "uniswap_v3_math\uniswap_v3_math.fsproj", "{03FA03EB-A192-49DA-8122-148CF86711C0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UniswapV3", "UniswapV3\UniswapV3.csproj", "{8DFC3BF4-2618-45FD-AF34-9ABF84F25F58}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomInt256", "CustomInt256\CustomInt256.csproj", "{C66AAE9D-CB55-473F-8340-038DA881DD90}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UniswapV3.Tests", "UniswapV3.Tests\UniswapV3.Tests.csproj", "{EFE0820B-60B8-4FA5-9919-3919AB1A90BA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{03FA03EB-A192-49DA-8122-148CF86711C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{03FA03EB-A192-49DA-8122-148CF86711C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{03FA03EB-A192-49DA-8122-148CF86711C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{03FA03EB-A192-49DA-8122-148CF86711C0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8DFC3BF4-2618-45FD-AF34-9ABF84F25F58}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8DFC3BF4-2618-45FD-AF34-9ABF84F25F58}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8DFC3BF4-2618-45FD-AF34-9ABF84F25F58}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8DFC3BF4-2618-45FD-AF34-9ABF84F25F58}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C66AAE9D-CB55-473F-8340-038DA881DD90}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C66AAE9D-CB55-473F-8340-038DA881DD90}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C66AAE9D-CB55-473F-8340-038DA881DD90}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C66AAE9D-CB55-473F-8340-038DA881DD90}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EFE0820B-60B8-4FA5-9919-3919AB1A90BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EFE0820B-60B8-4FA5-9919-3919AB1A90BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EFE0820B-60B8-4FA5-9919-3919AB1A90BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EFE0820B-60B8-4FA5-9919-3919AB1A90BA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
