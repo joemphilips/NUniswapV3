@@ -65,6 +65,12 @@ public readonly struct Int256 : IComparable, IComparable<Int256>, IInteger<Int25
         Add(in a, in b, out Int256 res);
         return res;
     }
+
+    public static Int256 operator -(in Int256 a, in Int256 b)
+    {
+        Subtract(in a, in b, out Int256 res);
+        return res;
+    }
     
     public static bool AddOverflow(in Int256 a, in Int256 b, out Int256 res)
     {
@@ -389,6 +395,12 @@ public readonly struct Int256 : IComparable, IComparable<Int256>, IInteger<Int25
         return res;
     }
 
+    public static Int256 operator *(in Int256 x, in Int256 y)
+    {
+        Multiply(x, y, out var res);
+        return res;
+    }
+
     public void LeftShift(int n, out Int256 res) => LeftShift(this, n, out res);
 
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -575,6 +587,9 @@ public readonly struct Int256 : IComparable, IComparable<Int256>, IInteger<Int25
         return z._value < x._value;
     }
     public static bool operator >(in Int256 z, in Int256 x) => x < z;
+
+    public static bool operator >=(in Int256 z, in Int256 x) => z == x || z > x;
+    public static bool operator <=(in Int256 z, in Int256 x) => z == x || z < x;
 
     public static explicit operator Int256(ulong value) => new((UInt256)value);
 
