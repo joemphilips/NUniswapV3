@@ -493,6 +493,7 @@ public readonly struct UInt256 : IComparable, IComparable<UInt256>, IInteger<UIn
     {
         return AddImpl(in a, in b, out res);
     }
+    
 
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     private static void AddWithCarry(ulong x, ulong y, ref ulong carry, out ulong sum)
@@ -591,7 +592,7 @@ public readonly struct UInt256 : IComparable, IComparable<UInt256>, IInteger<UIn
             ThrowNotSupportedException();
         }
     }
-
+    
     // Mod sets res to the modulus x%y for y != 0.
     // If y == 0, z is set to 0 (OBS: differs from the big.Int)
     public static void Mod(in UInt256 x, in UInt256 y, out UInt256 res)
@@ -1015,6 +1016,11 @@ public readonly struct UInt256 : IComparable, IComparable<UInt256>, IInteger<UIn
     {
         Umul(x, y, out res, out UInt256 high);
         return !high.IsZero;
+    }
+    
+    public static void MultiplySaturating(in UInt256 x, in UInt256 y, out UInt256 res) {
+        if (MultiplyOverflow(x, y, out res))
+            res = MaxValue;
     }
 
     public int BitLen =>

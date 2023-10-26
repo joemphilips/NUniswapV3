@@ -383,6 +383,11 @@ public readonly struct Int256 : IComparable, IComparable<Int256>, IInteger<Int25
     }
 
     public void Neg(out Int256 res) => Neg(this, out res);
+    
+    public static Int256 operator -(in Int256 x) {
+        Neg(in x, out var res);
+        return res;
+    }
 
     public void LeftShift(int n, out Int256 res) => LeftShift(this, n, out res);
 
