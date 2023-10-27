@@ -593,6 +593,11 @@ public readonly struct UInt256 : IComparable, IComparable<UInt256>, IInteger<UIn
         }
     }
     
+    public static UInt256 operator %(in UInt256 x, in UInt256 y) {
+        Mod(in x, in y, out var res);
+        return res;
+    }
+    
     // Mod sets res to the modulus x%y for y != 0.
     // If y == 0, z is set to 0 (OBS: differs from the big.Int)
     public static void Mod(in UInt256 x, in UInt256 y, out UInt256 res)
@@ -1467,7 +1472,7 @@ public readonly struct UInt256 : IComparable, IComparable<UInt256>, IInteger<UIn
     }
 
     public void RightShift(int n, out UInt256 res) => Rsh(this, n, out res);
-
+    
     public static UInt256 operator >>(in UInt256 a, int n)
     {
         a.RightShift(n, out UInt256 res);

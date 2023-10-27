@@ -401,6 +401,17 @@ public readonly struct Int256 : IComparable, IComparable<Int256>, IInteger<Int25
         return res;
     }
 
+    public static Int256 operator >>(in Int256 x, int n)
+    {
+        x.RightShift(n, out var res);
+        return res;
+    }
+    public static Int256 operator <<(in Int256 x, int n)
+    {
+        x.LeftShift(n, out var res);
+        return res;
+    }
+
     public void LeftShift(int n, out Int256 res) => LeftShift(this, n, out res);
 
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -653,6 +664,13 @@ public readonly struct Int256 : IComparable, IComparable<Int256>, IInteger<Int25
         UInt256.Or(in a._value, in b._value, out var o);
         res = new Int256(o);
     }
+    
+    public static Int256 operator |(in Int256 a, in Int256 b)
+    {
+        Or(in a, in b, out var res);
+        return res;
+    }
+
 
     public static void Not(in Int256 a, out Int256 res)
     {
